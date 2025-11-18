@@ -1,5 +1,5 @@
 
-const API_KEY="9bd3212352b5272b3ebc0c0a5609e135";
+const API_KEY="pub_b2929075bbbc4c5aa5ea4bce177c4ea4";
 const articlesEl=document.getElementById("articles");
 const pageInfo=document.getElementById("pageInfo");
 let all=[],page=1,pageSize=6;
@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 async function fetchNews(){
-  const res=await fetch(`https://api.mediastack.com/v1/news?access_key=${API_KEY}&languages=en&limit=50`);
+  const res=await fetch(`https://newsdata.io/api/1/latest? 
+  apikey=pub_b2929075bbbc4c5aa5ea4bce177c4ea4`);
   const data=await res.json();
   all=data.data||[];
   render();
